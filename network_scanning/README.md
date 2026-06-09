@@ -24,10 +24,11 @@ Objetivo analizado: 192.168.1.4
 
 
 ## 1. Descubrimiento de Host
+
 ```bash
 nmap -sn 192.168.1.0/24
 ```
-
+![HostsEncontrados](screenshots/Descubrimiento%20de%20Hosts.png)
 
 Hosts encontrados: 
 
@@ -48,6 +49,7 @@ Estado : 7 hosts Up
 ```bash
 nmap -sS 192.168.1.4
 ```
+![PuertosAbiertos](screenshots/Escaneo%20de%20Puertos.png)
 
 Puertos abiertos
 
@@ -81,6 +83,7 @@ Puertos abiertos
 ```bash
 nmap -sV 192.168.1.4
 ```
+![Servicios](screenshots/Deteccion%20de%20Servicios.png)
 
 ### Servicios 
 
@@ -115,6 +118,7 @@ http        Apache Tomcat/Coyote JSP engine 1.1
 ```bash
 nmap -O 192.168.1.4
 ```
+![SistemaOperativo](screenshots/Deteccion%20de%20Sistema%20Operativo.png)
 
 ### Sistema Operativo
 
