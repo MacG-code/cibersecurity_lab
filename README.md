@@ -1,6 +1,6 @@
-# cibersecurity_lab
+# Cybersecurity Labs
 
-Laboratorio de ciberseguridad personal enfocado en el aprendizaje práctico, análisis de redes, evaluación de vulnerabilidades y prácticas de seguridad defensiva.
+Este repositorio contiene laboratorios prácticos de ciberseguridad desarrollados para el aprendizaje y la práctica de técnicas de hacking ético y defensa. Cada laboratorio se enfoca en una área específica de la ciberseguridad, desde el reconocimiento de redes hasta la explotación de vulnerabilidades.
 
 ## Labs
 

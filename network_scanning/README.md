@@ -53,29 +53,34 @@ nmap -sS 192.168.1.4
 
 Puertos abiertos
 
-21/tcp   open  ftp
-22/tcp   open  ssh
-23/tcp   open  telnet
-25/tcp   open  smtp
-53/tcp   open  domain
-80/tcp   open  http
-111/tcp  open  rpcbind
-139/tcp  open  netbios-ssn
-445/tcp  open  microsoft-ds
-512/tcp  open  exec
-513/tcp  open  login
-514/tcp  open  shell
-1099/tcp open  rmiregistry
-1524/tcp open  ingreslock
-2049/tcp open  nfs
-2121/tcp open  ccproxy-ftp
-3306/tcp open  mysql
-5432/tcp open  postgresql
-5900/tcp open  vnc
-6000/tcp open  X11
-6667/tcp open  irc
-8009/tcp open  ajp13
-8180/tcp open  unknown
+| Puerto   | Estado   | Servicio       |
+|----------|----------|----------------|
+| 21/tcp   | Open     | FTP            |
+| 22/tcp   | Open     | SSH            |
+| 23/tcp   | Open     | Telnet         |
+| 25/tcp   | Open     | SMTP           |
+| 53/tcp   | Open     | DNS (Domain)   |
+| 80/tcp   | Open     | HTTP           |
+| 111/tcp  | Open     | RPCBind        |
+| 139/tcp  | Open     | NetBIOS-SSN    |
+| 445/tcp  | Open     | Microsoft-DS   |
+| 512/tcp  | Open     | Exec           |
+| 513/tcp  | Open     | Login          |
+| 514/tcp  | Open     | Shell          |
+| 1099/tcp | Open     | RMI Registry   |
+| 1524/tcp | Open     | Ingreslock     |
+| 2049/tcp | Open     | NFS            |
+| 2121/tcp | Open     | CCPROXY-FTP    |
+| 3306/tcp | Open     | MySQL          |
+| 5432/tcp | Open     | PostgreSQL     |
+| 5900/tcp | Open     | VNC            |
+| 6000/tcp | Open     | X11            |
+| 6667/tcp | Open     | IRC            |
+| 8009/tcp | Open     | AJP13          |
+| 8180/tcp | Open     | Unknown        |
+
+
+La presencia de múltiples servicios abiertos, algunos de ellos desactualizados o con configuraciones de seguridad débiles, incrementa significativamente la superficie de ataque del sistema y podría facilitar accesos no autorizados si no se aplican controles de seguridad adecuados.
 
 
 ## 3. Deteccion de Servicios
@@ -87,30 +92,30 @@ nmap -sV 192.168.1.4
 
 ### Servicios 
 
-SERVICE     VERSION
-ftp         vsftpd 2.3.4
-ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
-telnet      Linux telnetd
-smtp        Postfix smtpd
-domain      ISC BIND 9.4.2
-http        Apache httpd 2.2.8 ((Ubuntu) DAV/2)
-rpcbind     2 (RPC #100000)
-netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
-netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
-exec?
-login       OpenBSD or Solaris rlogind
-tcpwrapped
-java-rmi    GNU Classpath grmiregistry
-bindshell   Metasploitable root shell
-nfs         2-4 (RPC #100003)
-ftp         ProFTPD 1.3.1
-mysql       MySQL 5.0.51a-3ubuntu5
-postgresql  PostgreSQL DB 8.3.0 - 8.3.7
-vnc         VNC (protocol 3.3)
-X11         (access denied)
-irc         UnrealIRCd
-ajp13       Apache Jserv (Protocol v1.3)
-http        Apache Tomcat/Coyote JSP engine 1.1
+| Servicio     | Versión |
+|-------------|----------|
+| FTP         | vsftpd 2.3.4 |
+| SSH         | OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0) |
+| Telnet      | Linux telnetd |
+| SMTP        | Postfix smtpd |
+| DNS         | ISC BIND 9.4.2 |
+| HTTP        | Apache httpd 2.2.8 ((Ubuntu) DAV/2) |
+| RPCBind     | 2 (RPC #100000) |
+| NetBIOS-SSN | Samba smbd 3.X - 4.X (WORKGROUP) |
+| Exec        | Desconocido |
+| Login       | OpenBSD or Solaris rlogind |
+| TCPWrapped  | Servicio protegido por tcpwrappers |
+| Java RMI    | GNU Classpath grmiregistry |
+| Bind Shell  | Metasploitable root shell |
+| NFS         | 2-4 (RPC #100003) |
+| FTP         | ProFTPD 1.3.1 |
+| MySQL       | MySQL 5.0.51a-3ubuntu5 |
+| PostgreSQL  | PostgreSQL DB 8.3.0 - 8.3.7 |
+| VNC         | VNC (protocol 3.3) |
+| X11         | Access denied |
+| IRC         | UnrealIRCd |
+| AJP13       | Apache Jserv (Protocol v1.3) |
+| HTTP        | Apache Tomcat/Coyote JSP engine 1.1 |
 
 
 ## 4. Deteccion de Sistema Operativo
@@ -118,7 +123,7 @@ http        Apache Tomcat/Coyote JSP engine 1.1
 ```bash
 nmap -O 192.168.1.4
 ```
-![SistemaOperativo](screenshots/Deteccion%20de%20Sistema%20Operativo.png)
+![SistemaOperativo](screenshots/Deteccion%20de%20SO.png)
 
 ### Sistema Operativo
 
